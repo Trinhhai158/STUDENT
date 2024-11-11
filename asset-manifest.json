@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TTTH/static/css/main.ecc8fce3.css",
-    "main.js": "/TTTH/static/js/main.2962639d.js",
-    "static/js/453.45279ff2.chunk.js": "/TTTH/static/js/453.45279ff2.chunk.js",
-    "index.html": "/TTTH/index.html",
-    "main.ecc8fce3.css.map": "/TTTH/static/css/main.ecc8fce3.css.map",
-    "main.2962639d.js.map": "/TTTH/static/js/main.2962639d.js.map",
-    "453.45279ff2.chunk.js.map": "/TTTH/static/js/453.45279ff2.chunk.js.map"
+    "main.css": "/TTTH/Create-pages/static/css/main.ecc8fce3.css",
+    "main.js": "/TTTH/Create-pages/static/js/main.17061fea.js",
+    "static/js/453.45279ff2.chunk.js": "/TTTH/Create-pages/static/js/453.45279ff2.chunk.js",
+    "index.html": "/TTTH/Create-pages/index.html",
+    "main.ecc8fce3.css.map": "/TTTH/Create-pages/static/css/main.ecc8fce3.css.map",
+    "main.17061fea.js.map": "/TTTH/Create-pages/static/js/main.17061fea.js.map",
+    "453.45279ff2.chunk.js.map": "/TTTH/Create-pages/static/js/453.45279ff2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ecc8fce3.css",
-    "static/js/main.2962639d.js"
+    "static/js/main.17061fea.js"
   ]
 }
