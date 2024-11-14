@@ -1,0 +1,165 @@
+// Biến màu sắc cho chế độ sáng/tối
+$primary-color: #007bff;
+$secondary-color: #ff6347;
+$dark-bg-color: #222;
+$light-bg-color: #fff;
+$dark-text-color: #fff;
+$light-text-color: #333;
+
+// Cấu trúc chính cho header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $light-bg-color;
+  color: $light-text-color;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.dark {
+    background-color: $dark-bg-color;
+    color: $dark-text-color;
+  }
+
+  &.scrolled {
+    background-color: darken($light-bg-color, 10%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  &.active {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $secondary-color;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+// Tìm kiếm
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input {
+    padding: 8px 30px 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    color: $primary-color;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+// Menu hamburger
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.dark-mode-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: $light-bg-color;
+    padding: 10px 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+// Thêm dark mode toggle animation
+body.dark-mode {
+  background-color: $dark-bg-color;
+  color: $dark-text-color;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
